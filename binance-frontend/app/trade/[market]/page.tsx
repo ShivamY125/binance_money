@@ -10,13 +10,16 @@ export default function Page() {
 
     return <div className="flex flex-row flex-1">
         <div className="flex flex-col flex-1">
+            {/* this section is the place where coin/currency high low and volume is described. */}
             <MarketBar market={market as string} />
             <div className="flex flex-row h-[620px] border-y border-slate-800">
                 <div className="flex flex-col flex-1">
+                    {/* This is the place of TradeView where chart is shown. */}
                     <TradeView market={market as string} />
                 </div>
                 <div className="w-[1px] flex-col border-slate-800 border-l"></div>
                 <div className="flex flex-col w-[250px] overflow-hidden">
+                    {/* This is order book where all buy sell data will be visible  */}
                     <Depth market={market as string} /> 
                 </div>
             </div>
@@ -24,6 +27,7 @@ export default function Page() {
         <div className="w-[1px] flex-col border-slate-800 border-l"></div>
         <div>
             <div className="flex flex-col w-[250px]">
+                {/* Here all the buy sell section will be visible to us. */}
                 <SwapUI market={market as string} />
             </div>
         </div>

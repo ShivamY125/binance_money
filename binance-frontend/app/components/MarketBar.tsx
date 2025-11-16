@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { Ticker } from "../utils/types";
+import type { Ticker } from "../utils/types";
 import { getTicker } from "../utils/httpClient";
 
 export const MarketBar = ({market}: {market: string}) => {
@@ -17,7 +17,7 @@ export const MarketBar = ({market}: {market: string}) => {
                     <div className="flex items-center flex-row space-x-8 pl-4">
                         <div className="flex flex-col h-full justify-center">
                             <p className={`font-medium tabular-nums text-greenText text-md text-green-500`}>${ticker?.lastPrice}</p>
-                            <p className="font-medium text-sm text-sm tabular-nums">${ticker?.lastPrice}</p>
+                            <p className="font-medium text-sm tabular-nums">${ticker?.lastPrice}</p>
                         </div>
                         <div className="flex flex-col">
                             <p className={`font-medium text-xs text-slate-400 text-sm`}>24H Change</p>

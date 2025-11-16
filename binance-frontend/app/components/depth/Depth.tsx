@@ -5,6 +5,7 @@ import { getDepth, getKlines, getTicker, getTrades } from "../../utils/httpClien
 import { BidTable } from "./BidTable";
 import { AskTable } from "./AskTable";
 
+// Depth Compoenent Takes Market as Input (market is SOL/USDC)
 export function Depth({ market }: {market: string}) {
     const [bids, setBids] = useState<[string, string][]>();
     const [asks, setAsks] = useState<[string, string][]>();
